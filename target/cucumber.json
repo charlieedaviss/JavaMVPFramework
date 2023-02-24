@@ -1,0 +1,196 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "Login to an existing account, verify on Home Page",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 231345200,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user enters valid \"valid.username\" and \"valid.password\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"valid.username\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"valid.password\"",
+                  "offset": 39
+                }
+              ],
+              "location": "stepdefs.LoginSteps.user_enters_valid_username_and_password(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1419394000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user clicks on sign in button",
+            "match": {
+              "location": "stepdefs.LoginSteps.user_clicks_on_sign_in_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 67818900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "verify user is successfully logged into the account",
+            "match": {
+              "location": "stepdefs.LoginSteps.verify_user_is_successfully_logged_into_the_account()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-02-17T02:52:17.807Z",
+        "before": [
+          {
+            "result": {
+              "duration": 4246459500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefs.Hooks.setUp(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 8,
+        "name": "Deposit money into an existing account",
+        "description": "",
+        "id": "deposit-money-into-an-existing-account;deposit-money-into-an-existing-account",
+        "after": [
+          {
+            "result": {
+              "duration": 233644600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefs.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1001703900,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "user clicks on \"deposit\" menu item",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"deposit\"",
+                  "offset": 15
+                }
+              ],
+              "location": "stepdefs.DepositSteps.user_clicks_on_menu_item(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 8153000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "verify user is on the \"http://18.116.88.132:8080/bank/account/deposit\" page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"http://18.116.88.132:8080/bank/account/deposit\"",
+                  "offset": 22
+                }
+              ],
+              "location": "stepdefs.DepositSteps.verify_user_is_on_the_page(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 139616300,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user selects \"AutomationTest10 (Savings)\" for deposit from dropdown",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"AutomationTest10 (Savings)\"",
+                  "offset": 13
+                }
+              ],
+              "location": "stepdefs.DepositSteps.user_selects_account_for_deposit_from_dropdown(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1344403000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user enters deposit \"5000\" and clicks on submit button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"5000\"",
+                  "offset": 20
+                }
+              ],
+              "location": "stepdefs.DepositSteps.user_enters_deposit_info_and_clicks_on_submit_button(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 9643700,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "verify user is on the \"http://18.116.88.132:8080/bank/account/savings-view\" page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"http://18.116.88.132:8080/bank/account/savings-view\"",
+                  "offset": 22
+                }
+              ],
+              "location": "stepdefs.DepositSteps.verify_user_is_on_the_page(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Wip"
+          }
+        ]
+      }
+    ],
+    "name": "Deposit money into an existing account",
+    "description": "",
+    "id": "deposit-money-into-an-existing-account",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/Deposit.feature",
+    "tags": []
+  }
+]
