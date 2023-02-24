@@ -32,6 +32,8 @@ public class Hooks {
         if (scenario.isFailed()) {
             scenario.attach(CommonMethods.takeScreenshot(), "image/png", scenario.getName());
         }
+        CommonMethods.takeScreenshot(scenario);
+
         DriverUtilities.quitDriver(scenario);
     }
 }
