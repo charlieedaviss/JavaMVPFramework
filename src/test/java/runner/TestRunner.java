@@ -16,7 +16,7 @@ import org.junit.runner.RunWith;
         // glue is the package where  your Steps are implemented.
         glue = "stepdefs",
         // tags are essentially groups
-        tags = "@Wip", // tags = "@Chirag or @Paulina or @Regression",
+        tags = "@QuickTest", // tags = "@Chirag or @Paulina or @Regression",
         // Plugin is usually for which type of reporting tool you want to use
         // html: is what type of plugin we want
         // after the : is where we want it, in this case
