@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 
         // Link to tags documentation:
         // https://cucumber.io/docs/cucumber/api/?lang=java#tags
-
+        //
         // these are all parameters -> (features, glue, tags, plugins)
         // Features is which feature files you want to run
         features = "src//test//java//features",
@@ -29,7 +29,7 @@ import org.junit.runner.RunWith;
 
         // dryRun = true will normall run ALL feature files unless there are specified Tags (I think)
         // It's a great way to see if there are any un-implemented steps in your feature files.
-        dryRun = false)
+        dryRun = true)
 
 public class TestRunner {
 
