@@ -9,10 +9,10 @@ import org.junit.runner.RunWith;
 
         // Link to tags documentation:
         // https://cucumber.io/docs/cucumber/api/?lang=java#tags
-
+        // .
         // these are all parameters -> (features, glue, tags, plugins)
         // Features is which feature files you want to run
-        features = "src//test//java//features",
+        features = "src/test/resources/features",
         // glue is the package where  your Steps are implemented.
         glue = "stepdefs",
         // tags are essentially groups
