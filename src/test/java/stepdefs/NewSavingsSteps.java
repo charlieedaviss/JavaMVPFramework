@@ -5,6 +5,7 @@ import io.cucumber.java.en.Then;
 import pages.HomePage;
 import pages.NewSavingsPage;
 import pages.SavingsPage;
+import utilities.DatabaseUtils;
 
 public class NewSavingsSteps {
 
@@ -27,5 +28,11 @@ public class NewSavingsSteps {
         savingsPage.verifyNewAccountOwnershipType();
         savingsPage.verifyNewAccountBalance();
         Thread.sleep(6000);
+    }
+
+    @Then("verify account has been stored in database")
+    public void verify_account_has_been_stored_in_database() {
+        DatabaseUtils.executeQuery("Select * from digitalbank.account where id =4715");
+
     }
 }

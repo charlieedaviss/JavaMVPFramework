@@ -4,9 +4,9 @@ import java.sql.*;
 
 public class DatabaseUtils {
     static String url = ConfigReader.getConfigProperty("db.url");
-    static String userName = ConfigReader.getConfigProperty("root");
+    static String userName = ConfigReader.getConfigProperty("db.username");
     ;
-    static String password = ConfigReader.getConfigProperty("Beefstewme1@");
+    static String password = ConfigReader.getConfigProperty("db.password");
     ;
     static Connection con;
     static Statement stmt;
@@ -35,9 +35,9 @@ public class DatabaseUtils {
         //2. Execute the query - We use this whenever we want to execute the query
         // We have created
         try {
-            rs = stmt.executeQuery("Select * from employees");
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
+            rs = stmt.executeQuery(query);
+        } catch (Exception e) {
+            e.printStackTrace();;
         }
         return rs;
     }
