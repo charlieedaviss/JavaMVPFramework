@@ -1,6 +1,6 @@
 Feature:
 
-  @QuickTest
+  @Smoke
   Scenario: Verify user is able to login with valid credentials
     #Always start with Given or When
     Given user enters valid "valid.username" and "valid.password"
