@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         // Features is the path of your features package.
-        features = "src/test/java/features",
+        features = "src/test/sources/features",
         // Glue is the name of the package that contains the step defs.
         glue = "stepdefs",
         tags = "@Smoke",
