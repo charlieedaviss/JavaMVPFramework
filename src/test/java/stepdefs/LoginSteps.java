@@ -13,7 +13,6 @@ public class LoginSteps {
     // the page's methods into the steps.
 
     LoginPage loginPage = new LoginPage();
-    HomePage homePage = new HomePage();
 
     @Given("user enters valid {string} and {string}")
     public void user_enters_valid_username_and_password(String username, String password) {
@@ -23,10 +22,7 @@ public class LoginSteps {
     public void user_clicks_on_sign_in_button() {
         loginPage.clickSignInButton();
     }
-    @Then("verify user is successfully logged into the account")
-    public void verify_user_is_successfully_logged_into_the_account() {
-        homePage.verifyPage();
-    }
+
 
 
 }

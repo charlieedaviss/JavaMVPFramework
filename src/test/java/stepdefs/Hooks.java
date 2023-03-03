@@ -3,9 +3,7 @@ package stepdefs;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
-import utilities.CommonMethods;
-import utilities.ConfigReader;
-import utilities.DriverUtilities;
+import utilities.*;
 
 public class Hooks {
 
@@ -19,8 +17,11 @@ public class Hooks {
         // Here we are initializing the properties object inside the
         // ConfigReader class we created.
         ConfigReader.initializeProperties();
-
+        //Here we are initializing 3 objects inside the DAtaBaseUtils class we created
+        DatabaseUtils.initializeDBProperties();
         DriverUtilities.createDriver(scenario);
+
+
     }
 
     @After
@@ -33,6 +34,8 @@ public class Hooks {
             scenario.attach(CommonMethods.takeScreenshot(), "image/png", scenario.getName());
         }
         CommonMethods.takeScreenshot(scenario);
+
+        DatabaseUtils.closeDataBaseConnection();
 
         DriverUtilities.quitDriver(scenario);
     }
