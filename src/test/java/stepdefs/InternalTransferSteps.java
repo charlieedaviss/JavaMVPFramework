@@ -2,14 +2,17 @@ package stepdefs;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pages.HomePage;
 import pages.InternalTransferPage;
 
 public class InternalTransferSteps {
 
     InternalTransferPage internalTransferPage = new InternalTransferPage();
+    HomePage homePage = new HomePage();
 
     @Then("verify user is on Internal Transfer page")
     public void verify_user_is_on_internal_transfer_page() {
+        homePage.clickOnTransferBetweenAccounts();
         internalTransferPage.verifyInternalTransferPage();
     }
     @When("user select from account {string}")

@@ -82,11 +82,12 @@ public class DriverUtilities {
             }
         }
         driver.manage().window().maximize();
-
+        driver.manage().deleteAllCookies();
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 
         driver.get(ConfigReader.getConfigProperty("app.baseurl"));
+        driver.manage().deleteAllCookies();
     }
 
     public static void quitDriver(Scenario scenario){

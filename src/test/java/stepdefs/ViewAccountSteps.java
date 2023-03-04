@@ -19,7 +19,7 @@ public class ViewAccountSteps {
     }
     @Then("verify transaction history displayed for the new transaction")
     public void verify_transaction_history_displayed_for_the_new_transaction() {
-        viewAccountPage.verifyTransactionHistor();
+        viewAccountPage.verifyTransactionHistory();
 
     }
     @Then("verify transaction details getting updated into the database")
