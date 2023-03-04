@@ -36,8 +36,8 @@ public class DatabaseUtils {
         // We have created
         try {
             rs = stmt.executeQuery("Select * from employees");
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
         return rs;
     }

@@ -10,6 +10,7 @@ public class HomeSteps {
     public void verify_user_is_successfully_logged_into_the_account() {
         homePage.verifyPage();
     }
+
     @When("user clicks on transfer between accounts")
     public void user_clicks_on_transfer_between_accounts() {
         

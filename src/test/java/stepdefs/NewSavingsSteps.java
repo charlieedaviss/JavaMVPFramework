@@ -5,6 +5,7 @@ import io.cucumber.java.en.Then;
 import pages.HomePage;
 import pages.NewSavingsPage;
 import pages.SavingsPage;
+import utilities.DatabaseUtils;
 
 public class NewSavingsSteps {
 
@@ -28,4 +29,5 @@ public class NewSavingsSteps {
         savingsPage.verifyNewAccountBalance();
         Thread.sleep(6000);
     }
+
 }

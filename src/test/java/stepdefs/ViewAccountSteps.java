@@ -1,7 +1,11 @@
 package stepdefs;
 
 import io.cucumber.java.en.Then;
+import org.junit.Assert;
 import pages.ViewAccountPage;
+import utilities.DatabaseUtils;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class ViewAccountSteps {
 
@@ -21,6 +25,23 @@ public class ViewAccountSteps {
     @Then("verify transaction details getting updated into the database")
     public void verify_transaction_details_getting_updated_into_the_database() {
         viewAccountPage.verifyDetailsIntoDatabase();
+
+    }
+
+    @Then("verify account has been stored in data base")
+    public void verify_account_has_been_stored_in_data_base() {
+        ResultSet accNumResultSet = DatabaseUtils.executeQuery("SELECT * FROM account where id = " + viewAccountPage.getAccountID()+ ";");
+        try {
+            accNumResultSet.next();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            Assert.assertTrue("No matching information is found", accNumResultSet.getObject("id")!= null);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
 
     }
 }

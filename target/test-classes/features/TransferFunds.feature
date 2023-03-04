@@ -11,7 +11,7 @@ Feature:
   Scenario: Verify user is able to transfer to different account
     When user clicks on transfer between accounts
 
-    Then verify user is on Internal Transfer page
+    Then verify user is on the Internal Transfer page
     When user select from account "transfer.from.account"
     And user select to account "transfer.to.account"
     And user enter amount "transfer.amount"

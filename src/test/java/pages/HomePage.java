@@ -20,6 +20,8 @@ public class HomePage extends BasePage {
     WebElement depositMenuItem;
     @FindBy(id = "withdraw-menu-item")
     WebElement withdrawMenuItem;
+    @FindBy(id = "transfer-menu-item")
+    WebElement transferItemMenu;
 
 
     public void logOut(){
@@ -28,7 +30,11 @@ public class HomePage extends BasePage {
     }
 
     public void verifyPage(){
-        Assert.assertTrue("Welcome text is not displayed", welcomeTestMessage.isDisplayed() );
+        Assert.assertTrue("Welcome text is not displayed, could be on wrong page", welcomeTestMessage.isDisplayed() );
+    }
+
+    public void clickOnTransferBetweenAccounts(){
+        transferItemMenu.click();
     }
 
     public void openNewSavingsPage(){

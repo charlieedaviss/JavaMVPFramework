@@ -18,7 +18,7 @@ public class InternalTransferSteps {
     }
     @When("user select to account {string}")
     public void user_select_to_account(String toAccount) {
-        internalTransferPage.selecttoAccount(toAccount);
+        internalTransferPage.selectToAccount(toAccount);
     }
     @When("user enter amount {string}")
     public void user_enter_amount(String amount) {
